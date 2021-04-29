@@ -1,3 +1,15 @@
 <?php
+/**
+ * Index Template
+ *
+ * @package Catherine
+ */
+ get_header();
+?>
 
-//Silence is Golden 
+<div>
+	Content
+</div>
+
+<?php get_footer(); ?>
+ 
