@@ -6,9 +6,13 @@
  */
 
 
-//Define a constant for the autoloader path
+//Define a constant for get_template_directory to be use on catherine theme
 if ( ! defined( 'CATHERINE_DIR_PATH' ) ){
-	define( 'CATHERINE_DIR_PATH', untrailingslashit( get_template_directory_uri() ) );
+	define( 'CATHERINE_DIR_PATH', untrailingslashit( get_template_directory() ) );
+}
+//Define a constant for get_template_directory_uri to be use on catherine theme
+if ( ! defined( 'CATHERINE_DIR_URI' ) ){
+	define( 'CATHERINE_DIR_URI', untrailingslashit( get_template_directory_uri() ) );
 }
 
 //include all the classes inside the autoloader.php
@@ -21,23 +25,11 @@ function catherine_get_theme_instance(){
 
 catherine_get_theme_instance();
 
+
 function catherine_enqueue_scripts(){
 
-	//Register Styles
-	wp_register_style( 'style-css', get_stylesheet_uri(), [], filemtime( get_template_directory() . '/style.css'), 'all' );
-	wp_register_style( 'bootstrap-css', get_template_directory_uri() . '/assets/src/library/css/bootstrap.min.css' , [], false , 'all' );
-	
-	//Register Scripts
-	wp_register_script( 'main-js', get_template_directory_uri() . '/assets/main.js',  [], filemtime( get_template_directory() . '/assets/main.js'), true );
-	wp_register_script( 'bootstrap-js', get_template_directory_uri() . '/assets/src/library/js/bootstrap.min.js' , [ 'jquery' ], false, true );
-	
-	//Enqueue Styles
-	wp_enqueue_script( 'style-css' );
-	wp_enqueue_style( 'bootstrap-css' );
 
-	//Enqueue Scripts
-	wp_enqueue_script( 'main-js' );
-	wp_enqueue_script( 'bootstrap-js' );
+
 }
 
 add_action( 'wp_enqueue_scripts', 'catherine_enqueue_scripts' );

@@ -12,11 +12,18 @@ class CATHERINE_THEME{
  	use Singleton;	
 
  	protected function __construct(){
+ 		
  		//load other class.
- 		$this->set_hooks();
+
+ 		Assets::get_instance();
+
+ 		$this->setup_hooks();
  	}
 
- 	protected function set_hooks() {
- 		//actions and filters will remain
+ 	protected function setup_hooks() {
+ 		/** 
+		 * Actions go here...
+ 		 **/
  	}
+
 }
