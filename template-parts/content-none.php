@@ -1,6 +1,6 @@
 <?php
 /**
- * Displaying a Message that there's an empty post 
+ * Displaying a Message if there's an empty post 
  *
  * @package catherine
  */

@@ -50,6 +50,8 @@ class CATHERINE_THEME{
  		] );
  		//Add a Featured image in post
  		add_theme_support( 'post-thumbnails' );
+ 		//Register Image size
+ 		add_image_size( 'featured-thumbnail', 350, 233, true );
  		//Add selective refresh support for widgets and add an ability of not having to refresh the entire preview window
  		add_theme_support( 'customize-selective-refresh-widgets' );
  		//Add rss feed links to the head

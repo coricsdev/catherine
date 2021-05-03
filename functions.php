@@ -17,6 +17,8 @@ if ( ! defined( 'CATHERINE_DIR_URI' ) ){
 
 //include all the classes inside the autoloader.php
 require_once CATHERINE_DIR_PATH . '/inc/helpers/autoloader.php';
+//include all the classes inside the template-tags.php
+require_once CATHERINE_DIR_PATH . '/inc/helpers/template-tags.php';
 
 //calling the get_instance method from the singleton
 function catherine_get_theme_instance(){
