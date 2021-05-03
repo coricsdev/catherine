@@ -10,7 +10,7 @@
 <div id="primary">
 	<main id="main" class="site-main mt-5" role="main">
 		<?php 
-			if ( have_posts() ) { ?>
+			if ( have_posts() ) : ?>
 				<div class="container">
 						<?php 
 						//check if this is the blog page and not the front page
@@ -33,12 +33,10 @@
 								if ( 0 === $index % $no_of_columns ) { ?>
 									<!-- 3 columns for desktop tablet and mobile -->
 									<div class="col-lg-4 col-md-6 col-sm-12">
-							<?php } ?>
+							<?php } 
 
-							<h3><?php the_title(); ?></h3>
-							<div><?php the_excerpt(); ?></div>
+							get_template_part( 'template-parts/content' );
 
-							<?php
 							$index++; // Case: index + 1	
 								if ( 0 !== $index && 0 === $index % $no_of_columns ) { ?>
 									</div>
@@ -47,7 +45,13 @@
 							?>
 						</div>
 				</div>
-		<?php }
+		<?php 
+			//Run if there are no posts available
+			else: 
+
+				get_template_part( 'template-parts/content-none' );
+
+			endif;
 		?>
 	</main>
 </div>
