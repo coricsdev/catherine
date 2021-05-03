@@ -13,7 +13,8 @@ $header_menus = wp_get_nav_menu_items( $header_menu_id );
 ?>
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <!--  Add the custom logo to the header -->
+  <div class="container">
+    <!--  Add the custom logo to the header -->
    <?php 
     if ( function_exists( 'the_custom_logo' ) ){
         the_custom_logo();
@@ -77,4 +78,5 @@ $header_menus = wp_get_nav_menu_items( $header_menu_id );
               <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
           </form>
     </div>
+  </div>
 </nav>
