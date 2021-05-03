@@ -1,1 +1,1 @@
-#A WordPress Theme - Catherine
+#Catherine - Just another simple WP Custom Theme

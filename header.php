@@ -15,8 +15,11 @@
 <body <?php body_class(); ?>> 
 
 <?php
+	//Check the wordpress version if it is running 5.2+
 	if( function_exists( 'wp_body_open' ) ){
-	 wp_body_open(); 
+	//Run this if true
+	//Add provision for adding GA and FP script in body tag
+		wp_body_open(); 
 }
 ?>
 
