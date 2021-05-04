@@ -13,10 +13,11 @@ class CATHERINE_THEME{
 
  	protected function __construct() {
  		
- 		//Load other class.
+ 		//Load other class or instantiate class from classes folder.
 
- 		Assets::get_instance();
- 		Menus::get_instance();
+ 		Assets::get_instance(); //for class Assets
+ 		Menus::get_instance(); //for class Menus
+ 		Meta_Boxes::get_instance(); //for class Meta Boxes
  		
  		$this->setup_hooks();
  	}

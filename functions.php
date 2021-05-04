@@ -28,13 +28,5 @@ function catherine_get_theme_instance(){
 catherine_get_theme_instance();
 
 
-function catherine_enqueue_scripts(){
-
-
-
-}
-
-add_action( 'wp_enqueue_scripts', 'catherine_enqueue_scripts' );
-
 ?>
 

@@ -31,7 +31,7 @@ class Assets {
 		wp_register_style( 'bootstrap-css', CATHERINE_DIR_URI . '/assets/src/library/css/bootstrap.min.css' , [], false , 'all' );
 
 		//Enqueue Styles
-		wp_enqueue_script( 'style-css' );
+		wp_enqueue_style( 'style-css' );
 		wp_enqueue_style( 'bootstrap-css' );
  	}
 
