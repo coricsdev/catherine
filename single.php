@@ -34,6 +34,12 @@
 
 			endif;
 		?>
+			<div class="container">
+				<?php 
+					previous_post_link();
+					next_post_link();
+				 ?>
+			</div>
 	</main>
 </div>
 

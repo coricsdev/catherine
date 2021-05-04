@@ -1,6 +1,6 @@
 <?php
 
-
+//Post Thumbnail
 function get_the_post_custom_thumbnail( $post_id, $size = 'featured-thumbnail', $additional_attributes = [] ) {
 
 	$custom_thumbnail = '';
@@ -27,9 +27,8 @@ function get_the_post_custom_thumbnail( $post_id, $size = 'featured-thumbnail', 
 	return $custom_thumbnail;
 }
 
-
 function the_post_custom_thumbnail( $post_id, $size = 'featured-thumbnail', $additional_attributes = [] ){
-	echo get_the_post_custom_thumbnail( $post_id, $size, $additional_attributes );
+		echo get_the_post_custom_thumbnail( $post_id, $size, $additional_attributes );
 }
 
 //Display Post Date meta on blog page
@@ -81,11 +80,30 @@ function catherine_the_excerpt( $trim_character_count = 0 ) {
 //Display Read More
 function catherine_excerpt_more( $more = '' ) {
 	if( ! is_single() ) {
-		$more = sprintf( '<br><button class="mt-4 btn btn-info "><a class="catherine-read-more text-white" href="%1$s">%2$s</a></button>',
+		$more = sprintf( '<button class="mt-4 btn btn-info "><a class="catherine-read-more text-white" href="%1$s">%2$s</a></button>',
 			get_permalink( get_the_ID() ),
 			__( 'Read more', 'catherine' ) 
 		);
 	}
-
 	return $more;
+}
+//Add Pagination to Post Page
+function catherine_pagination () {
+
+	//strip of HTML tag
+	$allowed_tags = [
+		'span' => [
+			'class' => []
+		],
+		'a' => [
+			'class' => [],
+			'href' => [],
+		]
+	];
+	$args = [
+		'before_page_number' => '<span class="btn border border-secondary mr-2 mb-2">',
+		'after_page_number'  => '</span>'
+	]; 
+
+	printf( '<nav class="catherine-pagination clearfix">%s</nav>', wp_kses( paginate_links( $args ), $allowed_tags ) );
 }

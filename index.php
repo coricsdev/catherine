@@ -9,7 +9,7 @@
 
 <div id="primary">
 	<main id="main" class="site-main mt-5" role="main">
-		<?php 
+			<?php 
 			if ( have_posts() ) : ?>
 				<div class="container">
 						<?php 
@@ -45,14 +45,12 @@
 							?>
 						</div>
 				</div>
-		<?php 
-			//Run if there are no posts available
-			else: 
-
-				get_template_part( 'template-parts/content-none' );
-
+				<?php 
+					else:  //Run if there are no posts available
+						get_template_part( 'template-parts/content-none' );
 			endif;
-		?>
+				catherine_pagination();
+			?>
 	</main>
 </div>
 
