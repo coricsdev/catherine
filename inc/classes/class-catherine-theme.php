@@ -18,6 +18,7 @@ class CATHERINE_THEME{
  		Assets::get_instance(); //for class Assets
  		Menus::get_instance(); //for class Menus
  		Meta_Boxes::get_instance(); //for class Meta Boxes
+ 		Sidebars::get_instance(); //for class SideBar
  		
  		$this->setup_hooks();
  	}
