@@ -1,12 +1,12 @@
 <?php
 /**
- * Sidebar Template containing the main widget area
+ * The sidebar containing the main widget area.
  *
- * @package catherine
+ * @package CATHERINE
  */
 
 ?>
 
 <aside id="secondary" role="complementary">
-	<?php dynamic_sidebar('sidebar-1'); ?>	
-</aside>
+	<?php dynamic_sidebar( 'sidebar-1' ); ?>
+</aside><!-- #secondary -->

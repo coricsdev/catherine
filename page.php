@@ -1,15 +1,14 @@
 <?php
 /**
- * Single Page Template
+ * Page template
  *
- * @package catherine
+ * @package CATHERINE
  */
- get_header();
+
+get_header();
+
 ?>
 
-<div class="content">
-	<?php esc_html_e( 'Single Page', 'catherine' ); ?>
-</div>
+<div>Single Page</div>
 
 <?php get_footer(); ?>
- 

@@ -1,38 +1,17 @@
 /*
-Theme Name: Catherine
-Theme URI: #
-Author: coricsdev
-Author URI: #
-Description: Just another WordPress custom theme
+Theme Name: CATHERINE
+Theme URI: https://codeytek.com/CATHERINE
+Author: Imran Sayed
+Author URI: https://codeytek.com/about
+Description: WordPress blogging theme
+Tags: blog, theme
 Version: 1.0
 Requires at least: 5.0
 Tested up to: 5.4
 Requires PHP: 7.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Text Domain: catherine
+Text Domain: CATHERINE
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
 */
-
-
-img {
-	width: 100%;
-	height: auto;
-}
-
-/* Entry Meta */
-.updated:not(.published){
-	display: none;
-}
-
-/* Nav Item */
-.nav-item:hover .dropdown-menu:not(.show){
-	display: block;
-}
-
-/*Pagination*/
-.page-numbers.current > span{
-	background-color: gray;
-	color: #fff;
-}

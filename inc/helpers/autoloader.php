@@ -1,9 +1,8 @@
-<?php 
-
+<?php
 /**
  * Autoloader file for theme.
  *
- * @package Catherine
+ * @package CATHERINE
  */
 
 namespace CATHERINE_THEME\Inc\Helpers;

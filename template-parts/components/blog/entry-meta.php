@@ -1,14 +1,15 @@
 <?php
 /**
- * Template for post entry meta
+ * Template for entry meta
  *
- * @package catherine
+ * @package CATHERINE
  */
+
 ?>
 
 <div class="entry-meta mb-3">
-	<?php 
-	catherine_posted_on(); 
-	catherine_posted_by(); 
+	<?php
+	CATHERINE_posted_on();
+	CATHERINE_posted_by();
 	?>
 </div>
