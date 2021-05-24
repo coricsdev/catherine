@@ -7,10 +7,6 @@ This theme uses Bootstrap to build an Advanced WordPress Theme from scratch
 
 ## Features
 
-- ![](demo/features-one.png)
-
-- ![](demo/features-two.png)
-
 - Custom front page.
 - Custom Blog page with posts displayed in grid format using bootstrap.
 - Block Style Variations
